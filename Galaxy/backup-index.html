@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galaxy Animation</title>
+  <link rel="stylesheet" href="./css/moving.css">
+</head>
+<body>
+  <main>
+    <h2>Galaxy: DEW-3 Portal Transportation Services</h2>
+    <div id="destination-panel">
+
+      <select id="portal" name="destinations">
+
+        <option>Portal Destination</option>
+        <option value="contact">Contact</option>
+        <option value="projects">Projects</option>
+        <option value="about">About</option>
+        <option value="research">Reaserch</option>
+      </select>
+      <button type="submit" class="btn" id="portal">Submit</button>
+    </div>
+  </main>
+  <div class="grid-wrapper">
+    <section class="pl" id="grid-1">
+      <label for="contact" name="contact-label">CONTACT
+        <div class="move">
+      </label>
+      <div class='planet shadow' id="contact"></div>
+    </section>
+
+    <section class='pl' id="grid-2">
+      <label for="projects" name="project-label">PROJECTS
+        <div class="move">
+      </label>
+      <div class='planet shadow' id="projects"></div>
+    </section>
+
+    <section class='pl' id="grid-3">
+      <label for="about" name="about-label">ABOUT
+        <div class="move">
+      </label>
+      <div class='planet shadow' id="about"></div>
+    </section>
+    <section class="pl" id="grid-4">
+      <label for="research" name="research-label">RESEARCH
+        <div class="move">
+      </label>
+      <div class='planet shadow' id="research"></div>
+    </section>
+  </div>
+
+
+  <script type="text/javascript" src="./js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+* {
+	box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Various Colors for testing and use*/
+
+:root {
+	--color-red: rgb(183, 4, 11);
+	--color-black: rgb(0, 0, 0);
+	--color-white: rgb(255, 255, 255);
+	--color-dgrey: rgb(89, 89, 89);
+	--color-dgreen: rgb(52, 73, 94);
+	--color-lightgrey: rgb(207, 205, 205);
+	--color-BGgrey: rgba(189, 188, 188, 0.582);
+	--color-btNred: rgba(220, 53, 69, 0.4);
+	--color-btNgreen: rgba(40, 167, 69, 0.8);
+	--color-btNblue: rgb(68, 0, 255, 0.8);
+	--color-dark: rgba(52, 58, 64, 0.8);
+	--color-btNyellow: rgba(255, 193, 7, 0.8);
+	--color-btNred: rgba(220, 53, 69, 0.4);
+	--color-glassaqua: rgba(23, 162, 187, 0.8);
+	--color-ghost: rgba(12, 12, 13, 0.3);
+
+	/* University of Tennessee Colors */
+	--color-utOrange: rgba(255, 130, 0, 1);
+	--color-utWhite: rgba(255, 255, 255, 1);
+	--color-utSmokey: rgba(88, 89, 91, 1);
+	--color-black: rgba(0, 0, 0, 1);
+	--color-matteBlack: rgba(21, 21, 21, 1);
+	--color-graphite: rgba(48, 48, 48, 1);
+
+	/* Possible color palette for portfolio */
+	--color-orange: rgba(255, 132, 0);
+	--color-btNblue: rgb(68, 0, 255, 0.8);
+	--color-ltgrn: rgb(123, 255, 0);
+	--color-purple: rgb(132, 0, 255);
+	--color-mint: rgb(0, 255, 196);
+	--color-bluepur: rgb(68, 0, 255);
+	--color-veryRed: rgb(255, 4, 0);
+	--color--yellow: rgb(251, 255, 0);
+
+	/* Nice colors for neon */
+	--color-red: rgb(183, 4, 11);
+	--color-btNgreen: rgba(40, 167, 69, 0.8);
+	--color-btNblue: rgba(68, 0, 255, 0.8);
+	--color-glassaqua: rgba(23, 162, 187, 0.8);
+	--color-aqua: rgba(31, 81, 255, 0.8);
+	--color-orange: rgba(255, 132, 0.8);
+
+	/* FCC Color Palette */
+	--color-fcc: rgb(10, 10, 34);
+	--color-fcccomp: rgb(36, 36, 10);
+	--color-fccpurple: rgb(36, 10, 36);
+	--color-fccforestgreen: rgb(10, 36, 10);
+	--color-fccGreen: rgb(10, 29, 36);
+	/* Fonts */
+	--ff-FT: 'Figtree', sans-serif;
+	--ff-R: 'Roboto', sans-serif;
+
+	/* Dark Theme Color Palettes grouped by space between*/
+	/* Dark Group 1 */
+	--clr-main: rgba(18, 18, 18, 0.8);
+	--clr-black: #000000;
+	--clr-taupe: #52057b;
+	--clr-ltPurp: #892cdc;
+	--clr-ltVio: #bc6ff1;
+
+	/* Dark Group 2 */
+	--clr-main: rgba(18, 18, 18, 0.8);
+	--clr-dkK: #150050;
+	--clr-dkKbp: #3f0071;
+	--clr-dkklbp: #610094;
+
+	/* Dark Group 3 */
+	--clr-main: rgba(18, 18, 18, 0.8);
+	--clr-dkkK: #3e065f;
+	--clr-dkkkbp: #700b97;
+	--clr-dkkklp: #8e05c2;
+}

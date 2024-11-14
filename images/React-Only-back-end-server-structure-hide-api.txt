@@ -1,0 +1,103 @@
+Create a back-end server file outside of the root directory of React file named "server.js"
+
+Hiding API Keys
+>nodemodules
+>public
+>src
+>image of a 'cog' for  .env
+{} package-lock.json
+{} package.json
+The letter "i" in a circle" README.MD
+>server.js
+
+Initialize dependencies and set up an endpoint.
+In your backend server file, initialize the installed dependencies and set up an endpoint that will make a GET request to the third-party API and return the response data on the listened port. Here is an example code snippet:
+// defining the server port
+const port = 5000
+
+// initializing installed dependencies
+const express = require('express')
+require('dotenv').config()
+const axios = require('axios')
+const app = express()
+const cors = require('cors')
+app.use(cors())
+
+// listening for port 5000
+app.listen(5000, ()=> console.log(`Server is running on ${port}` ))
+
+// API request
+app.get('/', (req,res)=>{    
+    const options = {
+        method: 'GET',
+        url: 'https://wft-geo-db.p.rapidapi.com/v1/geo/adminDivisions',
+        headers: {
+            'X-RapidAPI-Key':process.env.REACT_APP_API_KEY,
+            'X-RapidAPI-Host': 'wft-geo-db.p.rapidapi.com'
+        }
+   };
+   
+    axios.request(options).then(function (response) {
+        res.json(response.data);
+    }).catch(function (error) {
+        console.error(error);
+    });
+}
+
+Add a script tag in your package.json file that will run the back-end proxy server.
+under Debuug arrow
+"scripts": {
+	"start:backend": "nodemon server.js",
+	"start": "react-scripts start",
+	"build": "react-scripts build",
+	"test": "react-scripts test",
+	"eject": "react-scripts eject"
+},
+
+Kickstart the back-end server by running the command below and then, in this case, navigate to localhost:5000.
+
+npm run start:backend
+
+Make a request to the backend server (http://localhost:5000/) from the front end instead of directly to the API endpoint. Here’s an illustration:
+import axios from "axios";
+import {useState, useEffect} from "react"
+
+function App() {
+
+  const [data, setData] = useState(null)
+
+  useEffect(()=>{
+    const options = {
+      method: 'GET',
+      url: "http://localhost:5000",
+    }
+    axios.request(options)
+    .then(function (response) {
+        setData(response.data.data)
+    })
+    .catch(function (error) {
+        console.error(error);
+    })  
+  }, [])
+
+  console.log(data)
+
+  return (
+    <main className="App">
+    <h1>How to Create a Backend Proxy Server for Your API Keys</h1>
+     {data && data.map((result)=>(
+      <section key ={result.id}>
+        <h4>Name:{result.name}</h4>
+        <p>Population:{result.population}</p>
+        <p>Region:{result.region}</p>
+        <p>Latitude:{result.latitude}</p>
+        <p>Longitude:{result.longitude}</p>
+      </section>
+    ))}
+    </main>
+  )
+}
+export default App;
+
+
+

@@ -1,0 +1,28 @@
+  transition: width 2s;
+  transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+
+ 
+Value	Description
+x1,y1,x2,y2	Required. Numeric values. x1 and x2 must be a number from 0 to 1
+
+
+The cubic-bezier() function defines a Cubic Bezier curve.
+
+A Cubic Bezier curve is defined by four points P0, P1, P2, and P3. P0 and P3 are the start and the end of the curve and, in CSS these points are fixed as the coordinates are ratios. P0 is (0, 0) and represents the initial time and the initial state, P3 is (1, 1) and represents the final time and the final state.
+
+The cubic-bezier() function can be used with the animation-timing-function property and the transition-timing-function property. 
+
+
+1) Small planet is created with animation to float up and down surrounded by twinkling stars. 
+2) When cursor hovers, the planet zooms in to 300PX and holds that size until you move your cursor. 
+
+Gameify:
+1) Create a galazy baseball game to play baseball with the Gods by hitting planets through the solar system.
+2) Animation is already there to create a Slingshot/Throw motion to toss a ball at some target that will break magnificently. Add satisfying breaking and crashing sounds to create a stress relief game. 
+3) Home run derby to hit a baseball to the moon. 
+4) Make other planets that act as containers for projects you have created. 
+  *Games planet
+  *Utility planet > todo > calculators > spreadsheet templates with my custom charts. 
+  *My past planet to act as a resume and storytelling of my background. 
+
+  

@@ -1,0 +1,288 @@
+/* css-variables-pro/button-variations/variations.css */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+html {
+  font-size: 62.5%; /* (62.5/100) * 16px = 10px */
+  -webkit-text-size-adjust: none; /* for iOS Safari */
+  text-size-adjust: none; /* for other mobile browsers */
+}
+:root {
+/* <uniquifier>: Use a unique and descriptive class name */
+/* <weight>: Use a value from 100 to 1000 */
+
+/* Font- sizes */
+
+	 --fs-1: 1rem;
+	 --fs-2: 1.2rem;
+	 --fs-3: 1.4rem;
+	 --fs-4: 1.6rem;
+	 --fs-5: 2.0rem;
+	 --fs-6: 2.5rem;
+	 --fs-7: 3.5rem;
+	 --fs-8: 4.0rem;
+	 --fs-9: 4.5rem;
+	 
+	/* Font-weights <weight>: Use a value from 100 to 900 */
+	--fw-1: 100;
+	--fw-2: 200;
+	--fw-3: 300;
+	--fw-4:	400;
+	--fw-5:	500;
+	--fw-6: 600;	
+	--fw-7:	700;
+	--fw-8:	800;
+	--fw-9:	900;
+
+	
+/* Standard Colors - Good for bright/light modes*/
+	--white: #ffffff;
+	--black: #0d0d0e;
+	--primary: #0076c6;
+	--secondary: #888383;
+	--success: #0cc7be;
+	--danger: #fd0707;
+	--warning: rgb(236, 236, 39);
+	--info: #009070;
+
+	/* Other color variations */
+	--color-red: #fb464c;
+  --color-orange:	#e9973f;
+  --color-yellow:	#e0de71;
+  --color-green: #44cf6e;
+  --color-cyan:	#53dfdd;
+  --color-blue:	#027aff;
+  --color-purple:	#a882ff;
+  --color-white:	#fcfcfc;
+
+}
+
+
+
+/* Roboto-flex font definitions for the each setting below */
+.prim-txt {
+  font-family: "Roboto Flex", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0, /* font-tilt for italics */
+    "wdth" 100, 
+
+    "GRAD" 0, /* Appears to behave as YOPQ + XOPQ in stroke thinkness */
+    "XOPQ" 96, /* Parametric Thin Stroke (XOPQ in CSS)
+		The Parametric Thin Strokes axis alters stroke widths at their thinnest parts, typically in the X dimension for the Latin script. One use-case is to improve legibility in very small sized text, because it can lower stroke contrast.*/
+    "XTRA" 468, /* Parametric Counter Width (XTRA in CSS)
+		The Parametric Counter Width axis alters the transparent forms inside and around glyphs in the X dimension. One application is in fine-tuning justification, as it changes the number of characters per line. */
+    "YOPQ" 79, /* Parametric Thin Stroke (YOPQ in CSS)
+		The Parametric Thin Strokes axis alters stroke widths at their thinnest parts, typically in the Y dimension for the Latin script. One use-case is to improve legibility in very small sized text, because it can lower stroke contrast.*/
+
+    "YTAS" 750, /* Parametric Ascender Height (YTAS in CSS)
+		The Parametric Ascender Height axis alters the volume of all space within the ascenders’ vertical alignment zone.*/
+
+    "YTDE" -203, /* Parametric Descender Depth (YTDE in CSS)
+		The Parametric Descender Depth axis alters the depth of the space within the descenders’ vertical alignment zone, which has a negative value being below the baseline. */
+    "YTFI" 738, /* Parametric Figure Height (YTFI in CSS)
+		The Parametric Figure Height axis alters the vertical space of figures. It can be used for aligning figures to other vertical zones.*/
+
+    "YTLC" 514, /* Parametric Lowercase Height (YTLC in CSS)
+		The Parametric Lowercase Height axis alters the volume of all space within the lowercase's vertical alignment zone: the vertical space inside counters of glyphs and the space in their sidebearings. (This adds more space vertically instead of changing the side bearings like tracking does).		
+		This is not truly an “x-height axis," since it only adjusts space vertically, and x-height proportions are formed by the relationships of uppercase, lowercase, ascenders and descenders, as well as horizontal forms. There are parametric axes for all of these. */
+
+    "YTUC" 712; /*Parametric Uppercase Height (YTUC in CSS)
+		Similarly, the Parametric Uppercase Height axis alters the volume of all space within the uppercase's vertical alignment.*/
+}
+
+.headings {
+  font-family: "Roboto Serif", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "GRAD" 0; 
+}
+h6,
+h5,
+h4,
+h3,
+h2,
+h1 {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+h1 {
+	font-size: var(--fs-5);
+	font-weight: var(--fw-5);
+}
+h2 {
+	font-size: var(--fs-4);
+	font-weight: var(--fw-6)
+}
+
+
+/* Dark Mode */
+@media (prefers-colour-scheme: dark) {
+	body {
+			color: #ccc;
+			background: #222;
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+        scroll-behavior: smooth;
+  }
+}
+
+
+label,
+button,
+select,
+summary,
+[type=radio],
+[type=submit],
+[type=checkbox] {
+  font-size: var(--fs-4);
+  font-weight: var(--fw-4);
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+  cursor: pointer;
+}
+body {
+	background-color: #0076c6;
+}
+main {
+	min-height: 100vh;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 200px 200px 600px;
+	grid-auto-rows: auto;
+	margin: .5rem;
+	
+}
+#switch-container > div{
+	display: grid;
+	grid-template-columns: 5rem 15rem;
+	grid-template-rows: repeat(4, 50px);
+	border-radius: .5rem;
+	padding: 1rem;
+	background-color:#a882ff;	
+}
+
+#switch-label-container > div {
+	display:grid;
+
+	background-color:#a882ff;
+}
+
+
+section > div {
+	min-width: 600px;
+	display:grid;	
+	background-color:#a882ff;
+	border-radius: 5px;
+	padding: .5rem;
+	justify-content: center;
+}
+
+/* base style for all buttons */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* variations */
+
+.btn {
+	font-size: var(--fs-4);
+	padding: .5rem;
+}
+.primary {
+	background: var(--primary);
+	color: var(--white);
+	font-size: var(--fs-4);
+}
+.secondary {
+	background: var(--secondary);
+	color: var(--white);
+}
+.success {
+	background: var(--success);
+	color: var(--white);
+}
+.danger {
+	background: var(--danger);
+	color: var(--white);
+}
+.warning {
+	background: var(--warning);
+	color: var(--black);
+}
+.info {
+	background: var(--info);
+	color: var(--white);
+}
+

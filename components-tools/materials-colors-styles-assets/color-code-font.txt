@@ -1,0 +1,14 @@
+rgba(23, 162, 187, 0.8);
+
+#17a2bb ----missing the A above
+
+main font color: 
+#21c6e4
+
+RGB(33, 198, 228)
+
+RGB(13%, 78%, 89%)
+
+HSL(189, 78%, 51%)
+
+HSV(189, 86%, 89%)

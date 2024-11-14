@@ -1,0 +1,22 @@
+    Let min=1min=1m, i, n, equals, 1 and max=nmax=nm, a, x, equals, n.
+    Guess the average of maxmaxm, a, x and minminm, i, n, rounded down so that it is an integer.
+    If you guessed the number, stop. You found it!
+    If the guess was too low, set minminm, i, n to be one larger than the guess.
+    If the guess was too high, set maxmaxm, a, x to be one smaller than the guess.
+    Go back to step two.
+
+Here's the pseudocode for binary search, modified for searching in an array. The inputs are the array, which we call array; the number n of elements in array; and target, the number being searched for. The output is the index in array of target:
+
+    Let min = 0 and max = n-1.
+    Compute guess as the average of max and min, rounded down (so that it is an integer).
+    If array[guess] equals target, then stop. You found it! Return guess.
+    If the guess was too low, that is, array[guess] < target, then set min = guess + 1.
+    Otherwise, the guess was too high. Set max = guess - 1.
+    Go back to step 2.
+
+We could make that description even more precise by clearly describing the inputs and the outputs for the algorithm and by clarifying what we mean by instructions like "guess a number" and "stop." But this is enough detail for now.
+
+Did you see how many steps that took? A binary search might be more efficient. Because the array primes contains 25 numbers, the indices into the array range from 0 to 24. Using the step-by-step instructions from the previous article, we start by letting min = 0 and max = 24. The first guess in the binary search would therefore be at index 12 (which is (0 + 24) / 2). Is primes[12] equal to 67? No, primes[12] is 41.
+Is the index we are looking for higher or lower than 12? Since the values in the array are in increasing order, and 41 < 67, the value 67 should be to the right of index 12. In other words, the index we are trying to guess should be greater than 12. We update the value of min to 12 + 1, or 13, and we leave max unchanged at 24.
+What's the next index to guess? The average of 13 and 24 is 18.5, which we round down to 18, since an index into an array must be an integer. We find that primes[18] is 67.
+The binary search algorithm stops at this point, since it has found the answer. It took only two guesses, instead of the 19 guesses that linear search would have taken. You can step through that again in the visualization below:
